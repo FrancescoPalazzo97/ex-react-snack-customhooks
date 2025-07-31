@@ -1,13 +1,13 @@
-import useDate from "./hooks/useDate";
+import useCustomPointer from "./hooks/useCustomPointer";
 
 function App() {
 
-  const currentDate = useDate();
+  const CustomPointer = useCustomPointer("🔥");
 
   return (
     <div>
-      <h1>Data e ora Attuali:</h1>
-      <p>{currentDate.toLocaleString()}</p>
+      <h1>Muovi il mouse per vedere il puntatore custom</h1>
+      {CustomPointer}
     </div>
   )
 }
