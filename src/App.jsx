@@ -1,13 +1,13 @@
-import useSwitch from "./hooks/useSwitch"
+import useDate from "./hooks/useDate";
 
 function App() {
 
-  const [isOn, toggle] = useSwitch();
+  const currentDate = useDate();
 
   return (
     <div>
-      <h1>Il valore è : {isOn ? `true` : `false`}</h1>
-      <button onClick={toggle}>{isOn ? `OFF` : `ON`}</button>
+      <h1>Data e ora Attuali:</h1>
+      <p>{currentDate.toLocaleString()}</p>
     </div>
   )
 }
